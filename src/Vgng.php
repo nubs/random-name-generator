@@ -32,8 +32,8 @@ class Vgng implements Generator
      */
     public function getName()
     {
-        $similarWords = [];
-        $words = [];
+        $similarWords = array();
+        $words = array();
 
         foreach ($this->_definitionSets as $definitionSet) {
             $word = $this->_getUniqueWord($definitionSet, $similarWords);
@@ -126,6 +126,6 @@ class Vgng implements Generator
         $word = strtok($definition, '^');
         $similarWords = array_filter(explode('|', strtok('^')));
 
-        return ['word' => $word, 'similarWords' => $similarWords];
+        return array('word' => $word, 'similarWords' => $similarWords);
     }
 }

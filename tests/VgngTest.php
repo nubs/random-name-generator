@@ -3,6 +3,11 @@ namespace Nubs\RandomNameGenerator;
 
 use PHPUnit_Framework_TestCase;
 
+function array_rand()
+{
+    return 1;
+}
+
 /**
  * @coversDefaultClass \Nubs\RandomNameGenerator\Vgng
  * @covers ::<protected>
@@ -20,7 +25,6 @@ class VgngTest extends PHPUnit_Framework_TestCase
     {
         $vgng = new Vgng();
 
-        srand(1);
-        $this->assertSame("Jackie Chan's Penguin Anthology", $vgng->getName());
+        $this->assertSame('8-Bit Acid - 3rd Strike', $vgng->getName());
     }
 }

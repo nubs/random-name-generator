@@ -16,7 +16,7 @@ class VgngTest extends PHPUnit_Framework_TestCase
      * @covers ::__construct
      * @covers ::getName
      */
-    public function getName()
+    public function getNameBasic()
     {
         $vgng = new Vgng();
 

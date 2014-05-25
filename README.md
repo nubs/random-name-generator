@@ -18,3 +18,15 @@ This library requires PHP 5.3, or newer.
 ## Installation
 This package uses [composer](https://getcomposer.org) so you can just add
 `nubs\random-name-generator` as a dependency to your `composer.json` file.
+
+## Generators
+
+### Video Game Names
+The video game name generator is based off of [prior](http://videogamena.me/) [art](https://github.com/nullpuppy/vgng).  It will generate unique names based off of "typical" video games.
+
+#### Examples
+* *Kamikaze Bubblegum Warrior*
+* *Rockin' Valkyrie Gaiden*
+* *Neurotic Jackhammer Detective*
+* *My Little Mountain Climber Conflict*
+* *Small-Time Princess vs. The Space Mutants*

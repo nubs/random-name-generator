@@ -27,4 +27,22 @@ class VgngTest extends PHPUnit_Framework_TestCase
 
         $this->assertSame('8-Bit Acid - 3rd Strike', $vgng->getName());
     }
+
+    /**
+     * Verify that getName returns a name without similar strings.
+     *
+     * @test
+     * @covers ::__construct
+     * @covers ::getName
+     */
+    public function getNameSimilarName()
+    {
+        $numberGenerator = $this->getMock('\Cinam\Randomizer\NumberGenerator', array('getInt'));
+        $numberGenerator->expects($this->exactly(4))->method('getInt')->will($this->onConsecutiveCalls(0, 0, 2, 10));
+        $randomizer = new Randomizer($numberGenerator);
+
+        $vgng = new Vgng($randomizer);
+
+        $this->assertSame('3D Aerobics Academy', $vgng->getName());
+    }
 }

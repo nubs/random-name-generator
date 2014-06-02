@@ -1,6 +1,8 @@
 <?php
 namespace Nubs\RandomNameGenerator;
 
+use Cinam\Randomizer\Randomizer;
+
 /**
  * Defines a video game name generator based off of
  * https://github.com/nullpuppy/vgng which in turn is based off of
@@ -11,13 +13,18 @@ class Vgng implements Generator
     /** @type array The definition of the potential names. */
     protected $_definitionSets;
 
+    /** @type Cinam\Randomizer\Randomizer The random number generator. */
+    protected $_randomizer;
+
     /**
      * Initializes the Video Game Name Generator from the default word list.
      *
      * @api
+     * @param \Cinam\Randomizer\Randomizer $randomizer The random number generator.
      */
-    public function __construct()
+    public function __construct(Randomizer $randomizer = null)
     {
+        $this->_randomizer = $randomizer;
         $this->_definitionSets = array_map(
             array($this, '_parseSection'),
             $this->_getSections($this->_getFileContents())
@@ -54,7 +61,7 @@ class Vgng implements Generator
      */
     protected function _getUniqueWord(array $definitions, array $existingWords)
     {
-        $definition = $definitions[array_rand($definitions)];
+        $definition = $this->_randomizer ? $this->_randomizer->getArrayValue($definitions) : $definitions[array_rand($definitions)];
 
         if (array_search($definition['word'], $existingWords) === false) {
             return $definition;

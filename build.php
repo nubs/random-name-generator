@@ -3,7 +3,7 @@
 require 'vendor/autoload.php';
 
 $phpcsCLI = new PHP_CodeSniffer_CLI();
-$phpcsViolations = $phpcsCLI->process(array('standard' => array('PSR1'), 'files' => array('src', 'build.php')));
+$phpcsViolations = $phpcsCLI->process(array('standard' => array('PSR1'), 'files' => array('src', 'tests', 'build.php')));
 if ($phpcsViolations > 0) {
     exit(1);
 }

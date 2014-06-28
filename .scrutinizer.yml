@@ -12,7 +12,7 @@ tools:
             standard: PSR1
     sensiolabs_security_checker: true
     php_code_coverage:
-        test_command: './vendor/bin/phpunit --strict'
+        test_command: './vendor/bin/phpunit'
     php_loc:
         excluded_dirs:
             - vendor

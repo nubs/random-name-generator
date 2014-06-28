@@ -6,4 +6,4 @@ php:
   - 5.3
   - hhvm
 install: composer install
-script: ./vendor/bin/phpunit --strict tests
+script: ./vendor/bin/phpunit

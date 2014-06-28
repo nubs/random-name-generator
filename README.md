@@ -1,16 +1,15 @@
 # Random Name Generator
 A PHP library to create interesting, sometimes entertaining, random names.
 
-[![Build Status](https://travis-ci.org/nubs/random-name-generator.png)](https://travis-ci.org/nubs/random-name-generator)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nubs/random-name-generator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nubs/random-name-generator/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/nubs/random-name-generator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/nubs/random-name-generator/?branch=master)
+[![Build Status](http://img.shields.io/travis/nubs/random-name-generator.svg?style=flat)](https://travis-ci.org/nubs/random-name-generator)
+[![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/nubs/random-name-generator.svg?style=flat)](https://scrutinizer-ci.com/g/nubs/random-name-generator/)
+[![Code Coverage](http://img.shields.io/scrutinizer/coverage/g/nubs/random-name-generator.svg?style=flat)](https://scrutinizer-ci.com/g/nubs/random-name-generator/)
 
-[![Latest Stable Version](https://poser.pugx.org/nubs/random-name-generator/v/stable.png)](https://packagist.org/packages/nubs/random-name-generator)
-[![Total Downloads](https://poser.pugx.org/nubs/random-name-generator/downloads.png)](https://packagist.org/packages/nubs/random-name-generator)
-[![Latest Unstable Version](https://poser.pugx.org/nubs/random-name-generator/v/unstable.png)](https://packagist.org/packages/nubs/random-name-generator)
-[![License](https://poser.pugx.org/nubs/random-name-generator/license.png)](https://packagist.org/packages/nubs/random-name-generator)
+[![Latest Stable Version](http://img.shields.io/packagist/v/nubs/random-name-generator.svg?style=flat)](https://packagist.org/packages/nubs/random-name-generator)
+[![Total Downloads](http://img.shields.io/packagist/dt/nubs/random-name-generator.svg?style=flat)](https://packagist.org/packages/nubs/random-name-generator)
+[![License](http://img.shields.io/packagist/l/nubs/random-name-generator.svg?style=flat)](https://packagist.org/packages/nubs/random-name-generator)
 
-[![Dependency Status](https://www.versioneye.com/user/projects/537d561814c15855aa000019/badge.svg)](https://www.versioneye.com/user/projects/537d561814c15855aa000019)
+[![Dependency Status](https://www.versioneye.com/user/projects/537d561814c15855aa000019/badge.svg?style=flat)](https://www.versioneye.com/user/projects/537d561814c15855aa000019)
 
 ## Requirements
 This library requires PHP 5.3, or newer.

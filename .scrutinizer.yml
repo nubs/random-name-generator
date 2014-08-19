@@ -3,7 +3,7 @@ filter:
         - 'vendor/*'
         - 'tests/*'
 before_commands:
-    - 'composer install --dev'
+    - 'composer install'
 tools:
     php_analyzer: true
     php_mess_detector: true

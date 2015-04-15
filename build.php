@@ -3,13 +3,13 @@
 require 'vendor/autoload.php';
 
 $phpcsCLI = new PHP_CodeSniffer_CLI();
-$phpcsViolations = $phpcsCLI->process(array('standard' => array('PSR1'), 'files' => array('src', 'tests', 'build.php')));
+$phpcsViolations = $phpcsCLI->process(['standard' => ['PSR1'], 'files' => ['src', 'tests', 'build.php']]);
 if ($phpcsViolations > 0) {
     exit(1);
 }
 
 $phpunitConfiguration = PHPUnit_Util_Configuration::getInstance(__DIR__ . '/phpunit.xml');
-$phpunitArguments = array('coverageHtml' => __DIR__ . '/coverage', 'configuration' => $phpunitConfiguration);
+$phpunitArguments = ['coverageHtml' => __DIR__ . '/coverage', 'configuration' => $phpunitConfiguration];
 $testRunner = new PHPUnit_TextUI_TestRunner();
 $result = $testRunner->doRun($phpunitConfiguration->getTestSuiteConfiguration(), $phpunitArguments);
 if (!$result->wasSuccessful()) {

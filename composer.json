@@ -1,7 +1,7 @@
 {
     "name": "nubs/random-name-generator",
     "description": "A library to create interesting, sometimes entertaining, random names.",
-    "keywords": ["random", "generator", "video game"],
+    "keywords": ["random", "generator", "video game", "alliteration"],
     "authors": [
         {
             "name": "Spencer Rinehart",

@@ -34,3 +34,12 @@ The video game name generator is based off of [prior](http://videogamena.me/) [a
 * *Neurotic Jackhammer Detective*
 * *My Little Mountain Climber Conflict*
 * *Small-Time Princess vs. The Space Mutants*
+
+## Alliterative Names
+The alliteration name generator is based off of a list of [adjectives](http://grammar.yourdictionary.com/parts-of-speech/adjectives/list-of-adjective-words.html) and a list of [animals](https://animalcorner.co.uk/animals/).
+
+#### Examples
+* *Agreeable Anaconda*
+* *Disturbed Duck*
+* *Misty Meerkat*
+* *Prickly Pig*

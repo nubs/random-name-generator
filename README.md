@@ -35,6 +35,12 @@ The video game name generator is based off of [prior](http://videogamena.me/) [a
 * *My Little Mountain Climber Conflict*
 * *Small-Time Princess vs. The Space Mutants*
 
+#### Usage
+```php
+$generator = new \Nubs\RandomNameGenerator\Vgng();
+echo $generator->getName();
+```
+
 ## Alliterative Names
 The alliteration name generator is based off of a list of [adjectives](http://grammar.yourdictionary.com/parts-of-speech/adjectives/list-of-adjective-words.html) and a list of [animals](https://animalcorner.co.uk/animals/).
 
@@ -43,3 +49,9 @@ The alliteration name generator is based off of a list of [adjectives](http://gr
 * *Disturbed Duck*
 * *Misty Meerkat*
 * *Prickly Pig*
+
+#### Usage
+```php
+$generator = new \Nubs\RandomNameGenerator\Alliteration();
+echo $generator->getName();
+```

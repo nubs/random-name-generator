@@ -3,7 +3,7 @@ A PHP library to create interesting, sometimes entertaining, random names.
 
 [![Build Status](http://img.shields.io/travis/nubs/random-name-generator.svg?style=flat)](https://travis-ci.org/nubs/random-name-generator)
 [![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/nubs/random-name-generator.svg?style=flat)](https://scrutinizer-ci.com/g/nubs/random-name-generator/)
-[![Code Coverage](http://img.shields.io/coveralls/nubs/random-name-generator.svg?style=flat)](https://coveralls.io/r/nubs/random-name-generator)
+[![Coverage Status](https://coveralls.io/repos/nubs/random-name-generator/badge.svg?branch=master&service=github)](https://coveralls.io/github/nubs/random-name-generator?branch=master)
 
 [![Latest Stable Version](http://img.shields.io/packagist/v/nubs/random-name-generator.svg?style=flat)](https://packagist.org/packages/nubs/random-name-generator)
 [![Total Downloads](http://img.shields.io/packagist/dt/nubs/random-name-generator.svg?style=flat)](https://packagist.org/packages/nubs/random-name-generator)

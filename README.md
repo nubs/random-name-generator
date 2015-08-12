@@ -55,3 +55,7 @@ The alliteration name generator is based off of a list of [adjectives](http://gr
 $generator = new \Nubs\RandomNameGenerator\Alliteration();
 echo $generator->getName();
 ```
+
+## License
+random-name-generator is licensed under the MIT license.  See
+[LICENSE](LICENSE) for the full license text.

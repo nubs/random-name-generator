@@ -14,10 +14,10 @@ to run the code through the [PSR-1 coding standard][psr-1] and the
 [PHPUnit][phpunit] test suite.  Code coverage is kept at 100% according to
 PHPUnit's code coverage report.
 
-Alternatively, you can use [Docker][docker] and/or [Fig][fig] to execute the
-build:
+Alternatively, you can use [Docker][docker] and/or [Docker
+Compose][docker-compose] to execute the build:
 ```bash
-fig run build
+docker-compose run build
 ```
 
 ## Automated builds
@@ -33,4 +33,4 @@ builds are monitored closely for all pull requests.
 [travis-ci]: https://travis-ci.org/nubs/random-name-generator
 [scrutinizer-ci]: https://scrutinizer-ci.com/g/nubs/random-name-generator/
 [docker]: https://docker.com/ "Docker - Build, Ship, and Run Any App, Anywhere"
-[fig]: http://www.fig.sh/ "Fig | Fast, isolated development environments using Docker"
+[docker-compose]: https://www.docker.com/docker-compose

@@ -12,7 +12,8 @@ having can also help make things move quickly.
 There is an included [build script][build-script] that you can execute locally
 to run the code through the [PSR-1 coding standard][psr-1] and the
 [PHPUnit][phpunit] test suite.  Code coverage is kept at 100% according to
-PHPUnit's code coverage report.
+PHPUnit's code coverage report.  This is inforced using
+[coveralls][coveralls].
 
 Alternatively, you can use [Docker][docker] and/or [Docker
 Compose][docker-compose] to execute the build:
@@ -32,5 +33,6 @@ builds are monitored closely for all pull requests.
 [phpunit]: http://phpunit.de/ "PHPUnit - The PHP Testing Framework"
 [travis-ci]: https://travis-ci.org/nubs/random-name-generator
 [scrutinizer-ci]: https://scrutinizer-ci.com/g/nubs/random-name-generator/
+[coveralls]: https://coveralls.io/github/nubs/random-name-generator
 [docker]: https://docker.com/ "Docker - Build, Ship, and Run Any App, Anywhere"
 [docker-compose]: https://www.docker.com/docker-compose

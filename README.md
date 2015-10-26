@@ -26,7 +26,9 @@ composer require nubs/random-name-generator
 ## Generators
 
 ### Video Game Names
-The video game name generator is based off of [prior](http://videogamena.me/) [art](https://github.com/nullpuppy/vgng).  It will generate unique names based off of "typical" video games.
+The video game name generator is based off of [prior](http://videogamena.me/)
+[art](https://github.com/nullpuppy/vgng).  It will generate unique names based
+off of "typical" video games.
 
 #### Examples
 * *Kamikaze Bubblegum Warrior*
@@ -42,7 +44,9 @@ echo $generator->getName();
 ```
 
 ## Alliterative Names
-The alliteration name generator is based off of a list of [adjectives](http://grammar.yourdictionary.com/parts-of-speech/adjectives/list-of-adjective-words.html) and a list of [animals](https://animalcorner.co.uk/animals/).
+The alliteration name generator is based off of a list of
+[adjectives](http://grammar.yourdictionary.com/parts-of-speech/adjectives/list-of-adjective-words.html)
+and a list of [animals](https://animalcorner.co.uk/animals/).
 
 #### Examples
 * *Agreeable Anaconda*

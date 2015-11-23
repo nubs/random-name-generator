@@ -25,6 +25,17 @@ composer require nubs/random-name-generator
 
 ## Generators
 
+### All
+The "all" generator will utilize all other configured generators to generate
+random names.  It will select from the list of generators randomly and then
+use them to generate a random name using their functionality.
+
+#### Usage
+```php
+$generator = new \Nubs\RandomNameGenerator\All();
+echo $generator->getName();
+```
+
 ### Video Game Names
 The video game name generator is based off of [prior](http://videogamena.me/)
 [art](https://github.com/nullpuppy/vgng).  It will generate unique names based

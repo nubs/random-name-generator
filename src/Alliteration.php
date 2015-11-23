@@ -54,6 +54,6 @@ class Alliteration implements Generator
     protected function _getRandomWord(array $words, $startingLetter = null)
     {
         $wordsToSearch = $startingLetter === null ? $words : preg_grep("/^{$startingLetter}/", $words);
-        return $this->_randomizer ?  $this->_randomizer->getArrayValue($wordsToSearch) : $wordsToSearch[array_rand($wordsToSearch)];
+        return $this->_randomizer ? $this->_randomizer->getArrayValue($wordsToSearch) : $wordsToSearch[array_rand($wordsToSearch)];
     }
 }

@@ -15,16 +15,28 @@ class All implements Generator
     protected $_randomizer;
 
     /**
-     * Initializes the All Generator with the default generator list.
+     * Initializes the All Generator with the list of generators to choose from.
      *
      * @api
      * @param array $generators The random generators to use.
      * @param \Cinam\Randomizer\Randomizer $randomizer The random number generator.
      */
-    public function __construct(array $generators = [], Randomizer $randomizer = null)
+    public function __construct(array $generators, Randomizer $randomizer = null)
     {
-        $this->_generators = empty($generators) ? ['\Nubs\RandomNameGenerator\Alliteration', '\Nubs\RandomNameGenerator\Vgng'] : $generators;
+        $this->_generators = $generators;
         $this->_randomizer = $randomizer;
+    }
+
+    /**
+     * Constructs an All Generator using the default list of generators.
+     *
+     * @api
+     * @param \Cinam\Randomizer\Randomizer $randomizer The random number generator.
+     * @return \Nubs\RandomNameGenerator\All The constructed generator.
+     */
+    public static function create(Randomizer $randomizer = null)
+    {
+        return new self([new Alliteration($randomizer), new Vgng($randomizer)], $randomizer);
     }
 
     /**
@@ -45,10 +57,6 @@ class All implements Generator
      */
     protected function _getRandomGenerator()
     {
-        $generator = $this->_randomizer ?
-            $this->_randomizer->getArrayValue($this->_generators) :
-            $this->_generators[array_rand($this->_generators)];
-
-        return new $generator($this->_randomizer);
+        return $this->_randomizer ? $this->_randomizer->getArrayValue($this->_generators) : $this->_generators[array_rand($this->_generators)];
     }
 }

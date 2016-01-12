@@ -15,6 +15,7 @@ class AllTest extends PHPUnit_Framework_TestCase
      *
      * @test
      * @covers ::__construct
+     * @covers ::create
      * @covers ::getName
      * @uses \Nubs\RandomNameGenerator\Alliteration
      * @uses \Nubs\RandomNameGenerator\Vgng
@@ -23,7 +24,7 @@ class AllTest extends PHPUnit_Framework_TestCase
      */
     public function getNameBasic()
     {
-        $generator = new All();
+        $generator = All::create();
         $name = $generator->getName();
         $this->assertRegexp('/.+/', $name);
     }
@@ -33,6 +34,7 @@ class AllTest extends PHPUnit_Framework_TestCase
      *
      * @test
      * @covers ::__construct
+     * @covers ::create
      * @covers ::getName
      * @uses \Nubs\RandomNameGenerator\Alliteration
      *
@@ -41,10 +43,10 @@ class AllTest extends PHPUnit_Framework_TestCase
     public function getNameForced()
     {
         $numberGenerator = $this->getMock('\Cinam\Randomizer\NumberGenerator', array('getInt'));
-        $numberGenerator->expects($this->exactly(3))->method('getInt')->will($this->onConsecutiveCalls(0, 20, 5));
+        $numberGenerator->expects($this->exactly(2))->method('getInt')->will($this->onConsecutiveCalls(20, 5));
         $randomizer = new Randomizer($numberGenerator);
 
-        $generator = new All([], $randomizer);
+        $generator = new All([new Alliteration($randomizer)]);
         $this->assertSame('Black Beetle', $generator->getName());
     }
 }

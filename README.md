@@ -32,8 +32,20 @@ use them to generate a random name using their functionality.
 
 #### Usage
 ```php
-$generator = new \Nubs\RandomNameGenerator\All();
+$generator = \Nubs\RandomNameGenerator\All::create();
 echo $generator->getName();
+```
+
+Alternatively, if you want to configure/build the generators to use instead of
+using all of the available generators, you can construct them yourself:
+
+```php
+$generator = new \Nubs\RandomNameGenerator\All(
+    [
+        new \Nubs\RandomNameGenerator\Alliteration(),
+        new \Nubs\RandomNameGenerator\Vgng()
+    ]
+);
 ```
 
 ### Video Game Names

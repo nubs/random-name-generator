@@ -12,7 +12,7 @@ A PHP library to create interesting, sometimes entertaining, random names.
 [![Dependency Status](https://www.versioneye.com/user/projects/537d561814c15855aa000019/badge.svg?style=flat)](https://www.versioneye.com/user/projects/537d561814c15855aa000019)
 
 ## Requirements
-This library requires PHP 5.5, or newer.
+This library requires PHP 5.6, or newer.
 
 ## Installation
 This package uses [composer](https://getcomposer.org) so you can just add

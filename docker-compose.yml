@@ -1,4 +1,7 @@
-build:
-  build: tests
-  volumes:
-    - .:/code
+version: "2"
+services:
+  build:
+    build:
+      context: tests
+    volumes:
+      - .:/code

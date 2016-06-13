@@ -2,6 +2,7 @@ version: "2"
 services:
   build:
     build:
-      context: tests
+      context: .
+      dockerfile: Dockerfile.tests
     volumes:
       - .:/code

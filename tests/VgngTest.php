@@ -19,7 +19,7 @@ class VgngTest extends PHPUnit_Framework_TestCase
      */
     public function getNameBasic()
     {
-        $numberGenerator = $this->getMock('\Cinam\Randomizer\NumberGenerator', array('getInt'));
+        $numberGenerator = $this->createMock('\Cinam\Randomizer\NumberGenerator');
         $numberGenerator->expects($this->exactly(3))->method('getInt')->will($this->returnValue(1));
         $randomizer = new Randomizer($numberGenerator);
 
@@ -37,7 +37,7 @@ class VgngTest extends PHPUnit_Framework_TestCase
      */
     public function getNameSimilarName()
     {
-        $numberGenerator = $this->getMock('\Cinam\Randomizer\NumberGenerator', array('getInt'));
+        $numberGenerator = $this->createMock('\Cinam\Randomizer\NumberGenerator');
         $numberGenerator->expects($this->exactly(4))->method('getInt')->will($this->onConsecutiveCalls(0, 0, 2, 10));
         $randomizer = new Randomizer($numberGenerator);
 

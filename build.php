@@ -11,13 +11,12 @@ if ($phpcsViolations > 0) {
 $phpunitConfiguration = PHPUnit_Util_Configuration::getInstance(__DIR__ . '/phpunit.xml');
 $phpunitArguments = ['coverageHtml' => __DIR__ . '/coverage', 'configuration' => $phpunitConfiguration];
 $testRunner = new PHPUnit_TextUI_TestRunner();
-$result = $testRunner->doRun($phpunitConfiguration->getTestSuiteConfiguration(), $phpunitArguments);
+$result = $testRunner->doRun($phpunitConfiguration->getTestSuiteConfiguration(), $phpunitArguments, false);
 if (!$result->wasSuccessful()) {
     exit(1);
 }
 
-$coverageFactory = new PHP_CodeCoverage_Report_Factory();
-$coverageReport = $coverageFactory->create($result->getCodeCoverage());
+$coverageReport = $result->getCodeCoverage()->getReport();
 if ($coverageReport->getNumExecutedLines() !== $coverageReport->getNumExecutableLines()) {
     file_put_contents('php://stderr', "Code coverage was NOT 100%\n");
     exit(1);

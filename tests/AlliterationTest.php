@@ -38,7 +38,7 @@ class AlliterationTest extends PHPUnit_Framework_TestCase
      */
     public function getNameForced()
     {
-        $numberGenerator = $this->getMock('\Cinam\Randomizer\NumberGenerator', array('getInt'));
+        $numberGenerator = $this->createMock('\Cinam\Randomizer\NumberGenerator');
         $numberGenerator->expects($this->exactly(2))->method('getInt')->will($this->onConsecutiveCalls(20, 5));
         $randomizer = new Randomizer($numberGenerator);
 

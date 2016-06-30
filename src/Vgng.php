@@ -26,7 +26,7 @@ class Vgng implements Generator
     {
         $this->_randomizer = $randomizer;
         $this->_definitionSets = array_map(
-            array($this, '_parseSection'),
+            [$this, '_parseSection'],
             $this->_getSections($this->_getFileContents())
         );
     }
@@ -39,8 +39,8 @@ class Vgng implements Generator
      */
     public function getName()
     {
-        $similarWords = array();
-        $words = array();
+        $similarWords = [];
+        $words = [];
 
         foreach ($this->_definitionSets as $definitionSet) {
             $word = $this->_getUniqueWord($definitionSet, $similarWords);
@@ -104,7 +104,7 @@ class Vgng implements Generator
     protected function _parseSection($section)
     {
         return array_map(
-            array($this, '_parseDefinition'),
+            [$this, '_parseDefinition'],
             $this->_getDefinitionsFromSection($section)
         );
     }
@@ -133,6 +133,6 @@ class Vgng implements Generator
         $word = strtok($definition, '^');
         $similarWords = array_filter(explode('|', strtok('^')));
 
-        return array('word' => $word, 'similarWords' => $similarWords);
+        return ['word' => $word, 'similarWords' => $similarWords];
     }
 }

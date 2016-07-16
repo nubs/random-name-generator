@@ -23,5 +23,8 @@
         "psr-4": {
             "Nubs\\RandomNameGenerator\\": "src"
         }
+    },
+    "scripts": {
+      "test": "./build.php"
     }
 }

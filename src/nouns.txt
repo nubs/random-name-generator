@@ -257,7 +257,7 @@ masai
 masked
 mealy
 meerkat
-mexican
+mexican-wolf
 mice
 military
 milkweed

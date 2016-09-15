@@ -47,6 +47,6 @@ class AllTest extends PHPUnit_Framework_TestCase
         $randomizer = new Randomizer($numberGenerator);
 
         $generator = new All([new Alliteration($randomizer)]);
-        $this->assertSame('Black Beetle', $generator->getName());
+        $this->assertSame('Black Bear', $generator->getName());
     }
 }

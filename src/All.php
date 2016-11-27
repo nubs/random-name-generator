@@ -6,7 +6,7 @@ use Cinam\Randomizer\Randomizer;
 /**
  * A generator that uses all of the other generators randomly.
  */
-class All implements Generator
+class All extends AbstractGenerator implements Generator
 {
     /** @type array The other generators to use. */
     protected $_generators;

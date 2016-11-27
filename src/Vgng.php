@@ -8,7 +8,7 @@ use Cinam\Randomizer\Randomizer;
  * https://github.com/nullpuppy/vgng which in turn is based off of
  * http://videogamena.me/vgng.js.
  */
-class Vgng implements Generator
+class Vgng extends AbstractGenerator implements Generator
 {
     /** @type array The definition of the potential names. */
     protected $_definitionSets;

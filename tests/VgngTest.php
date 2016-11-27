@@ -45,4 +45,23 @@ class VgngTest extends PHPUnit_Framework_TestCase
 
         $this->assertSame('3D Aerobics Academy', $vgng->getName());
     }
+
+    /**
+     * Verify that toString returns the expected name.
+     *
+     * @test
+     * @covers ::__construct
+     * @covers ::__toString
+     * @covers ::getName
+     */
+    public function toStringBasic()
+    {
+        $numberGenerator = $this->createMock('\Cinam\Randomizer\NumberGenerator');
+        $numberGenerator->expects($this->exactly(3))->method('getInt')->will($this->returnValue(1));
+        $randomizer = new Randomizer($numberGenerator);
+
+        $vgng = new Vgng($randomizer);
+
+        $this->assertSame('8-Bit Acid - 3rd Strike', (string)$vgng);
+    }
 }

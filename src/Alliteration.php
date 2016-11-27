@@ -6,7 +6,7 @@ use Cinam\Randomizer\Randomizer;
 /**
  * Defines an alliterative name generator.
  */
-class Alliteration implements Generator
+class Alliteration extends AbstractGenerator implements Generator
 {
     /** @type array The definition of the potential adjectives. */
     protected $_adjectives;

@@ -49,4 +49,24 @@ class AllTest extends PHPUnit_Framework_TestCase
         $generator = new All([new Alliteration($randomizer)]);
         $this->assertSame('Black Bear', $generator->getName());
     }
+
+    /**
+     * Verify basic behavior of __toString().
+     *
+     * @test
+     * @covers ::__construct
+     * @covers ::create
+     * @covers ::__toString
+     * @covers ::getName
+     * @uses \Nubs\RandomNameGenerator\Alliteration
+     * @uses \Nubs\RandomNameGenerator\Vgng
+     *
+     * @return void
+     */
+    public function toStringBasic()
+    {
+        $generator = All::create();
+        $name = (string)$generator;
+        $this->assertRegexp('/.+/', $name);
+    }
 }

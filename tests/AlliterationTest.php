@@ -45,4 +45,22 @@ class AlliterationTest extends PHPUnit_Framework_TestCase
         $generator = new Alliteration($randomizer);
         $this->assertSame('Black Bear', $generator->getName());
     }
+
+    /**
+     * Verify basic behavior of __toString().
+     *
+     * @test
+     * @covers ::__construct
+     * @covers ::__toString
+     * @covers ::getName
+     *
+     * @return void
+     */
+    public function toStringBasic()
+    {
+        $generator = new Alliteration();
+        $parts = explode(' ', (string)$generator);
+        $this->assertSame(2, count($parts));
+        $this->assertSame($parts[0][0], $parts[1][0]);
+    }
 }

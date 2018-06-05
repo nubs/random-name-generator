@@ -1,11 +1,11 @@
 {
-    "name": "nubs/random-name-generator",
-    "description": "A library to create interesting, sometimes entertaining, random names.",
+    "name": "minthemiddle/random-name-generator",
+    "description": "A library to create interesting, sometimes entertaining, random names in German.",
     "keywords": ["random", "generator", "video game", "alliteration"],
     "authors": [
         {
-            "name": "Spencer Rinehart",
-            "email": "anubis@overthemonkey.com",
+            "name": "Martin Betz",
+            "email": "martinmichaelbetz@gmail.com",
             "role": "Developer"
         }
     ],

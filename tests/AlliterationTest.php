@@ -1,14 +1,15 @@
 <?php
 namespace Nubs\RandomNameGenerator;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Cinam\Randomizer\Randomizer;
+use Cinam\Randomizer\NumberGenerator;
 
 /**
  * @coversDefaultClass \Nubs\RandomNameGenerator\Alliteration
  * @covers ::<protected>
  */
-class AlliterationTest extends PHPUnit_Framework_TestCase
+class AlliterationTest extends TestCase
 {
     /**
      * Verify basic behavior of getName().
@@ -23,7 +24,7 @@ class AlliterationTest extends PHPUnit_Framework_TestCase
     {
         $generator = new Alliteration();
         $parts = explode(' ', $generator->getName());
-        $this->assertSame(2, count($parts));
+        $this->assertCount(2, $parts);
         $this->assertSame($parts[0][0], $parts[1][0]);
     }
 
@@ -38,7 +39,7 @@ class AlliterationTest extends PHPUnit_Framework_TestCase
      */
     public function getNameForced()
     {
-        $numberGenerator = $this->createMock('\Cinam\Randomizer\NumberGenerator');
+        $numberGenerator = $this->createMock(NumberGenerator::class);
         $numberGenerator->expects($this->exactly(2))->method('getInt')->will($this->onConsecutiveCalls(20, 5));
         $randomizer = new Randomizer($numberGenerator);
 
@@ -60,7 +61,7 @@ class AlliterationTest extends PHPUnit_Framework_TestCase
     {
         $generator = new Alliteration();
         $parts = explode(' ', (string)$generator);
-        $this->assertSame(2, count($parts));
+        $this->assertCount(2, $parts);
         $this->assertSame($parts[0][0], $parts[1][0]);
     }
 }

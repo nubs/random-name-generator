@@ -1,4 +1,4 @@
-<phpunit colors="true" forceCoversAnnotation="true" strict="true">
+<phpunit colors="true" forceCoversAnnotation="true">
     <testsuite name="Unit Tests">
         <directory>./tests</directory>
     </testsuite>

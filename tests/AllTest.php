@@ -1,14 +1,15 @@
 <?php
 namespace Nubs\RandomNameGenerator;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
+use Cinam\Randomizer\NumberGenerator;
 use Cinam\Randomizer\Randomizer;
 
 /**
  * @coversDefaultClass \Nubs\RandomNameGenerator\All
  * @covers ::<protected>
  */
-class AllTest extends PHPUnit_Framework_TestCase
+class AllTest extends TestCase
 {
     /**
      * Verify basic behavior of getName().
@@ -42,7 +43,7 @@ class AllTest extends PHPUnit_Framework_TestCase
      */
     public function getNameForced()
     {
-        $numberGenerator = $this->createMock('\Cinam\Randomizer\NumberGenerator');
+        $numberGenerator = $this->createMock(NumberGenerator::class);
         $numberGenerator->expects($this->exactly(2))->method('getInt')->will($this->onConsecutiveCalls(20, 5));
         $randomizer = new Randomizer($numberGenerator);
 

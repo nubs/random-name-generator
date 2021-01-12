@@ -1,14 +1,14 @@
 <?php
 namespace Nubs\RandomNameGenerator;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Cinam\Randomizer\Randomizer;
 
 /**
  * @coversDefaultClass \Nubs\RandomNameGenerator\All
  * @covers ::<protected>
  */
-class AllTest extends PHPUnit_Framework_TestCase
+class AllTest extends TestCase
 {
     /**
      * Verify basic behavior of getName().

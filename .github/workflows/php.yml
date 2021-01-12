@@ -1,0 +1,38 @@
+name: Build
+on: [push, pull_request]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                php: ['5.6', '7.0', '7.1', '7.2', '7.3', '7.4', '8.0']
+        name: PHP ${{ matrix.php }}
+        steps:
+            - uses: actions/checkout@v1
+            - name: Install PHP
+              uses: shivammathur/setup-php@master
+              with:
+                  php-version: ${{ matrix.php }}
+            - name: Report PHP version
+              run: php -v
+            - name: Validate composer.json and composer.lock
+              run: composer validate
+            - name: Get Composer Cache Directory
+              id: composer-cache
+              run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+            - name: Cache dependencies
+              uses: actions/cache@v1
+              with:
+                  path: ${{ steps.composer-cache.outputs.dir }}
+                  key: ${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: ${{ matrix.php }}-composer-
+            - name: Update dependencies
+              run: composer update --prefer-dist --no-progress --no-suggest
+            - name: Run test suite
+              run: ./vendor/bin/phpunit --coverage-clover clover.xml
+            - name: Run coverage service
+              env:
+                COVERALLS_RUN_LOCALLY: 1
+                COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+              run: ./vendor/bin/php-coveralls --coverage_clover=./clover.xml -v
